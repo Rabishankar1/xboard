@@ -1,0 +1,147 @@
+* {
+  font-family: "Montserrat";
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+a:hover {
+  filter: brightness(0.4);
+  transition: 0.2s all;
+}
+
+.accordion-button {
+  font-weight: 700;
+  /* font-size: 16px; */
+  /* line-height: 24px; */
+
+
+  letter-spacing: 0.1px;
+
+  /* second-text-color */
+
+  color: #737373;
+}
+
+#rectangle {
+  /* position: relative; */
+  height: 9px;
+  width: 27px;
+  /* left: 1px;
+  top: 10px; */
+  border-radius: 4.5px;
+  background-image: linear-gradient(to right, #e537b9, #c040df);
+}
+
+#heading {
+  /* position: absolute; */
+  width: 211px;
+  height: 24px;
+  /* left: 0px; */
+  /* top: 22px; */
+  /* font-family: "Montserrat"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 24px;
+  /* identical to box height, or 104% */
+
+  letter-spacing: 2px;
+
+  /* Text/text-gray-dark */
+
+  color: #292b2e;
+}
+
+.navbar {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  /* left: 5%;
+  top: 0px; */
+}
+
+#nav-wrapper {
+  /* position: relative; */
+  border-bottom: 1px solid #e1e4e8;
+  height: 91px;
+}
+
+/* #line {
+  position: absolute;
+  width: 414px;
+  height: 0px;
+  left: 0px;
+  top: 105px;
+} */
+
+#today {
+  /* position: absolute;
+  width: 74px;
+  height: 32px; */
+  /* left: 6%; */
+  /* top: 123px; */
+
+  /* font-family: "Montserrat"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #252b42;
+}
+
+.carouselHeading {
+  /* font-family: "Montserrat"; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.1px;
+
+  /* Text/text-gray-dark */
+
+  color: #292b2e;
+}
+
+.carouselSubHeading {
+  /* font-family: "Montserrat"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 28px;
+  /* identical to box height, or 215% */
+
+  letter-spacing: 0.2px;
+
+  /* Text/text-gray */
+
+  color: #586069;
+}
+
+.carouselContent {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+
+  letter-spacing: 0.2px;
+}
