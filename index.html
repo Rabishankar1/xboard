@@ -1,54 +1,70 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"
-    />
-    <title>Crio News Feed</title>
-    <meta name="description" content="Crio Feed Website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="resources/css/index.css" />
-  </head>
 
-  <body>
-    <div id="main-body">
-      <div id="nav-wrapper">
-        <div class="navbar navbar-light">
-          <div class="mx-4">
-            <ul class="navbar-nav w-100">
-              <li class="nav-item">
-                <div id="rectangle"></div>
-              </li>
-            </ul>
-            <a class="navbar-brand nav-item" id="heading" href="#"
-              >Crio News Feed</a
-            >
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
+  <title>Crio News Feed</title>
+  <meta name="description" content="Crio Feed Website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="resources/css/index.css" />
+</head>
+
+<body>
+  <div id="main-body">
+    <div id="nav-wrapper">
+      <div class="navbar navbar-light">
+        <div class="mx-4">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <div id="rectangle"></div>
+            </li>
+          </ul>
+          <a class="navbar-brand nav-item" id="heading" href="#">Crio News Feed</a>
         </div>
       </div>
-      <!-- <div id="line"></div> -->
-      <div id="today" class="mx-4 mt-4">Today</div>
-      <div class="text-secondary mx-4 mb-4">The insights you need to keep ahead</div>
-      <div id="content"></div>
     </div>
-    <script src="resources/data/magazines.js"></script>
-    <script src="resources/js/index.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <!-- <div id="line"></div> -->
+    <div id="today" class="mx-4 mt-4">Today</div>
+    <p class="mx-4 mb-4" style="opacity: 0.6;">The insights you need to keep ahead</p>
+    <div id="content"></div>
+  </div>
+  <script>
+    const prev = (i) => {
+      console.log("clicking prev", i);
+      document.getElementById(`carousel${i}next`).classList.remove("d-none");
+      let flag1 = document
+        .getElementById(`carouselExampleControls${i}`).getElementsByClassName("carousel-item")[1].classList.contains("active");
+      console.log(flag1, "flag prev")
+      if (flag1) {
+        document.getElementById(`carousel${i}prev`).classList.add("d-none");
+      } else {
+        document.getElementById(`carousel${i}prev`).classList.remove("d-none");
+      }
+    }
+
+
+    const next = (i, length) => {
+      console.log("clicking", i, length)
+      document.getElementById(`carousel${i}prev`).classList.remove("d-none");
+
+      let flag2 = document
+        .getElementById(`carouselExampleControls${i}`).getElementsByClassName("carousel-item")[length - 2].classList.contains("active");
+      console.log(flag2, "flag")
+      if (flag2) {
+        document.getElementById(`carousel${i}next`).classList.add("d-none");
+      } else {
+        document.getElementById(`carousel${i}next`).classList.remove("d-none");
+      }
+    }
+  </script>
+  <script src="resources/data/magazines.js" type="module"></script>
+  <script src="resources/js/index.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
 </html>

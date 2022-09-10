@@ -25,6 +25,11 @@ a:hover {
   transition: 0.2s all;
 }
 
+img:hover {
+  transform: scale(1.1);
+  transition: 0.2s all;
+}
+
 .accordion-button {
   font-weight: 700;
   /* font-size: 16px; */
@@ -81,14 +86,6 @@ a:hover {
   border-bottom: 1px solid #e1e4e8;
   height: 91px;
 }
-
-/* #line {
-  position: absolute;
-  width: 414px;
-  height: 0px;
-  left: 0px;
-  top: 105px;
-} */
 
 #today {
   /* position: absolute;
