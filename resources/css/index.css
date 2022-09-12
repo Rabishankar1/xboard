@@ -129,7 +129,7 @@ img:hover {
   letter-spacing: 0.2px;
 
   /* Text/text-gray */
-
+  opacity: 0.8;
   color: #586069;
 }
 
@@ -141,4 +141,26 @@ img:hover {
   /* or 162% */
 
   letter-spacing: 0.2px;
+}
+
+.spacing {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.accordion-button:after {
+  order: -1;
+  margin-left: 2em;
+  margin-right: 0.5em;
+}
+
+@media only screen and (max-width:768px) {
+  .spacing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .accordion-body {
+    padding-left: 0 ;
+    padding-right:0 ;
+  }
 }

@@ -41,7 +41,7 @@ data.forEach(i => {
   for (let j = 0; j < i.items.length; j++) {
     let item = `<div class="carousel-item ${active(j)}">
     <a href="${i["items"][j]["link"]}" target="_blank">
-    <div class="card" >
+    <div class="card border-0">
     <div class="overflow-hidden">
     <img src="${i["items"][j]["enclosure"]["link"]}" class="card-img-top d-block w-100" alt="...">
     </div>
@@ -55,7 +55,7 @@ data.forEach(i => {
   </div>`;
     inner.innerHTML += item;
   }
-  let carousel = `<div id="carouselExampleControls${id}" class="carousel slide" data-bs-ride="carousel">
+  let carousel = `<div id="carouselExampleControls${id}" class="carousel slide spacing mx-4" data-bs-ride="carousel">
   <div class= "carousel-inner">
   ${inner.innerHTML}
   </div>
@@ -69,9 +69,9 @@ data.forEach(i => {
   </button>
   </div>`
 
-  let accordionItem = `<div class="accordion-item" >
-      <h2 class="accordion-header" id="heading${id}">
-        <button class="accordion-button ${acc(data.indexOf(i))}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${id}" aria-controls="collapse${id}">
+  let accordionItem = `<div class="accordion-item border-0" >
+      <h2 class="accordion-header border-0" id="heading${id}">
+        <button class="border-0 accordion-button ${acc(data.indexOf(i))} spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${id}" aria-controls="collapse${id}">
           ${i.feed.title}
         </button>
       </h2>
